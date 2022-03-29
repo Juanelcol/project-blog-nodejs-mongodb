@@ -22,9 +22,9 @@ console.log(req.body)
    if(req.body.senha = "" || typeof req.body.senha == undefined || req.body.senha == null || req.body.senha.length < 6){
     errors.push({texto: 'senha inválida ou muito curta'})
   }
-  /*if(req.body.senha != req.body.senha2){
+   if(req.body.senha != req.body.senha2){
     errors.push({texto: "as senhas são diferentes"})
-  }*/
+  }
   if(errors.length > 0){
     res.render('usuarios/registro', {erro: errors})
   } else {
